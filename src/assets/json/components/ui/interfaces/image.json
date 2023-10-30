@@ -1,0 +1,8 @@
+{
+  "data": {
+    "image": {
+      "code": "export interface Image {\n\t/**\n\t* Especifica o texto alternatino na imagem.\n\t*/\n\talt?: string;\n\n\t/**\n\t* Especifica a altura da imagem.\n\t*/\n\theight?: string;\n\n\t/**\n\t* Especifica o caminho da imagem.\n\t*/\n\tsrc?: string;\n\n\t/**\n\t* Especifica a largura da imagem.\n\t*/\n\twidth?: string;\n\n\t/**\n\t* Classe CSS que será aplicado na imagem.\n\t*/\n\tcssClass?: string;\n}",
+      "language": "typescript"
+    }
+  }
+}

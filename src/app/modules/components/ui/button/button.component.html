@@ -1,0 +1,93 @@
+<div class="md:mt-2">
+  <div class="flex items-center font-bold uppercase text-2xl">
+    <h1>UI Button</h1>
+  </div>
+  <p class="pt-2 text-gray-600">Exemplos para utilização do componente Button.</p>
+</div>
+<hr class="my-4 border-b-2 border-gray-200" />
+
+<div class="mb-6 text-sm">
+  <p class="">Use o componente botão com suporte para vários estilos, cores, tamanhos, gradientes e sombras.</p>
+</div>
+
+<app-example-viewer [title]="'Alguns exemplos do componente Botão'">
+  <h2>Personalização do Color</h2>
+  <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-1">
+    <vat-button *ngFor="let color of eColor | keyvalue" [text]="color.key" [color]="color.value"></vat-button>
+  </div>
+</app-example-viewer>
+
+<div class="mt-10">
+  <h2 class="font-semibold">Configuração</h2>
+  <p class="text-xs">
+    Após instalar o componente, será necessário importar o Modulo do Bottão nos modulos da aplicação, conforme exemplo
+    abaixo.
+  </p>
+  <app-code-viewer [codeViewer]="codeModule"></app-code-viewer>
+</div>
+
+<div class="mt-10">
+  <h2 class="font-semibold">Eventos disponíveis no componente Button</h2>
+  <div class="overflow-x-auto relative shadow-md mt-2">
+    <table class="w-full text-sm text-left text-gray-500">
+      <thead class="text-xs text-gray-700 uppercase bg-gray-100">
+        <tr>
+          <th class="py-1 px-6">Nome do Evento</th>
+          <th class="py-1 px-6">Quando ocorre</th>
+          <th class="py-1 px-6">Retorno</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of buttonEvents" class="hover:bg-gray-200/30">
+          <th class="py-2 px-6 font-medium text-gray-900 whitespace-nowrap">{{ item.name }}</th>
+          <td class="px-6">{{ item.trigger }}</td>
+          <td class="px-6">{{ item.return }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="mt-10">
+  <h2 class="font-semibold">Exemplo de personalização para estilo "Color"</h2>
+  <div class="grid grid-cols-5 gap-1">
+    <vat-button *ngFor="let color of eColor | keyvalue" [text]="color.key" [color]="color.value"></vat-button>
+  </div>
+  <p>O parâmetro <span class="font-semibold">"Collor"</span> recebe um enumerador, conforme mostrado abaixo:</p>
+  <app-code-viewer [codeViewer]="codeColorEnum"></app-code-viewer>
+  <app-code-viewer [codeViewer]="codeColor"></app-code-viewer>
+</div>
+
+<div class="mt-10">
+  <h2 class="font-semibold">Exemplo de personalização de Tamanho</h2>
+  <div class="w-4/5">
+    <h1>Personalização do Size</h1>
+    <div class="grid grid-cols-3 gap-1 items-center">
+      <vat-button *ngFor="let size of eSize | keyvalue" [text]="size.key" [size]="size.value"></vat-button>
+    </div>
+  </div>
+  <p>O parâmetro <span class="font-semibold">"size"</span> recebe um enumerador, conforme mostrado abaixo:</p>
+  <app-code-viewer [codeViewer]="codeSizeEnum"></app-code-viewer>
+  <app-code-viewer [codeViewer]="codeSize"></app-code-viewer>
+</div>
+
+<div class="mt-10">
+  <h2 class="font-semibold">Exemplo de personalização do Arredondamento</h2>
+  <h1>Personalização do Rounded</h1>
+  <div class="grid grid-cols-5 gap-1">
+    <vat-button *ngFor="let rounded of eRounded | keyvalue" [text]="rounded.key" [rounded]="rounded.value"></vat-button>
+  </div>
+  <p>O parâmetro <span class="font-semibold">"rounded"</span> recebe um enumerador, conforme mostrado abaixo:</p>
+  <app-code-viewer [codeViewer]="codeRoundedEnum"></app-code-viewer>
+  <app-code-viewer [codeViewer]="codeRounded"></app-code-viewer>
+</div>
+
+<div class="mt-10">
+  <h2 class="font-semibold">Exemplo de personalização da Mensagem</h2>
+  <div class="flex flex-wrap space-x-4 items-center px-4 py-4 bg-sky-100/50">
+    <vat-button [text]="'Exemplo'" [collor]="5" [rounded]="eRounded.md" [message]="'1.235.896'"></vat-button>
+    <vat-button [text]="'Exemplo'" [gradientDuotone]="4" [rounded]="eRounded.none" [message]="'mensagem'"></vat-button>
+  </div>
+  <p>O parâmetro <span class="font-semibold">"message"</span> recebe um string, conforme mostrado abaixo:</p>
+  <app-code-viewer [codeViewer]="codeMensagem"></app-code-viewer>
+</div>

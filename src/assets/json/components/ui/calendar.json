@@ -1,0 +1,29 @@
+{
+  "data": {
+    "codeModule": {
+      "code": "import { CalendarModule } from '@vissoto-angular/ui';\n\n\t@NgModule({\n\t\tdeclarations: [],\n\t\tproviders: [],\n\t\timports: [CommonModule, ComponentsRoutingModule, CalendarModule],\n\t})\n\n\texport class ComponentsModule { }",
+      "language": "typescript"
+    },
+    "template": {
+      "code": "<vat-calendar [notifications]=\"daysEvent\" [addNotification]=\"events\" \n\t\t(byClickPlus)=\"clickPlus()\" (byClickDate)=\"clickDate($event)\" \n\t\t(byClickMonth)=\"clickMonth()\" (byClickYear)=\"clickYear()\" \n\t\t(byChangeMonth)=\"changeMonth($event)\" (byChangeYear)=\"changeYear($event)\"></vat-calendar>",
+      "language": "html"
+    },
+    "theme": {
+      "code": "<vat-calendar [theme]=\"'classic'\"></vat-calendar>\n\t\t<vat-calendar [theme]=\"'dark'\"></vat-calendar>",
+      "language": "html"
+    },
+    "notification": {
+      "code": "export interface NotificationCalendar {\n\t\tday: number;\n\t\tmonth: number;\n\t\tyear: number;\n\t\tcountNotifications?: string;\n\t}",
+      "language": "typescript"
+    },
+    "addNotification": {
+      "code": "<vat-calendar [notifications]=\"daysEvent\" [addNotification]=\"events\"></vat-calendar>",
+      "language": "html"
+    },
+    "months": {
+      "code": "export interface Month {\n\t\tname: string;\n\t\tindex: number;\n\t\tselected?: boolean;\n\t\tdisabled?: boolean;\n\t}",
+      "language": "typescript"
+    },
+    "attributes": ["byClickPlus", "byClickDate", "byChangeMonth", "byClickMonth", "byChangeYear", "byClickYear"]
+  }
+}

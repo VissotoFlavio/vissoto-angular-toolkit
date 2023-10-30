@@ -1,0 +1,95 @@
+<div class="md:mt-2">
+  <div class="flex items-center font-bold uppercase text-2xl">
+    <h1>UI Tab</h1>
+  </div>
+  <p class="pt-2 text-gray-600">Exemplos para utilização do componente Tab.</p>
+</div>
+<hr class="my-4 border-b-2 border-gray-200" />
+
+<div class="mb-6 text-sm">
+  <p class="">O componente Tab organiza e permite a navegação entre grupos de conteúdo relacionados no mesmo nível
+    hierárquico.</p>
+</div>
+
+<app-example-viewer [title]="'Alguns exemplos do componente Tab'">
+  <div #divExemplo class="flex flex-col xsm:flex-row xsm:space-x-2 space-y-4 xsm:space-y-0 justify-center items-center">
+    <div>
+      <!-- <apptest-tab [itens]="itens" [maxWidthPx]="428" [maxWidthElement]="divExemplo" (byClicked)="click($event)"></apptest-tab> -->
+      <vat-tab [itens]="itens" [maxWidthElement]="divExemplo"(byClick)="click($event)"></vat-tab>
+      <div class="flex flex-col space-y-2 justify-center place-items-center">
+        <p>Pokemon selecionado: <span class="uppercase">{{itemSelected.text}}</span></p>
+        <img *ngIf="itemSelected.img" class="bg-cover bg-no-repeat rounded-2xl pb-2"
+          [style.background-image]="'url('+itemSelected.options.imgBg+')'" [src]="itemSelected.img.src"
+          [alt]="itemSelected.img.alt">
+      </div>
+    </div>
+  </div>
+</app-example-viewer>
+
+<div class="mt-10">
+  <h2 class="font-semibold">Configuração</h2>
+  <p class="text-sm">
+    Após instalar o componente, será necessário importar o Modulo do Tab nos modulos da aplicação, conforme exemplo abaixo.
+  </p>
+  <app-code-viewer *ngIf="moduleCV" [codeViewer]="moduleCV"></app-code-viewer>
+</div>
+
+<div class="mt-10">
+  <h2 class="font-semibold">Eventos disponíveis no componente Tab</h2>
+  <div class="overflow-x-auto relative shadow-md mt-2">
+    <table class="w-full text-sm text-left text-gray-500">
+      <thead class="text-xs text-gray-700 uppercase bg-gray-100">
+        <tr>
+          <th class="py-1 px-6">Nome do Evento</th>
+          <th class="py-1 px-6">Quando ocorre</th>
+          <th class="py-1 px-6">Retorno</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of events" class="hover:bg-gray-200/30">
+          <th class="py-2 px-6 font-medium text-gray-900 whitespace-nowrap">{{ item.name }}</th>
+          <td class="px-6">{{ item.trigger }}</td>
+          <td class="px-6">{{ item.return }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="mt-10">
+  <div class="pb-4">
+    <h2 class="font-semibold">O parâmetro "items" recebe uma interface, conforme mostrado abaixo:</h2>
+    <p class="text-sm">Existem duas maneiras para definir a largura máxima do componente Tab, utilizando os parametros listados abaixo:</p>
+    <app-code-viewer *ngIf="interfaceTabCV" [codeViewer]="interfaceTabCV"></app-code-viewer>
+    <app-code-viewer *ngIf="imageCV" [codeViewer]="imageCV"></app-code-viewer>
+  </div>
+</div>
+
+<div class="mt-10">
+  <div class="pb-4">
+    <h2 class="font-semibold">Exemplo de personalização para largura do Tab</h2>
+    <p class="text-sm">Existem duas maneiras para definir a largura máxima do componente Tab, utilizando os parametros listados abaixo:</p>
+  </div>
+  <div class="flex flex-col space-y-6">
+    <div>
+      <p class="text-sm">O parâmetro <span class="font-semibold">"maxWidthElement"</span> recebe uma referência de um elemento HTML e será aplicado no Max Width do Tab o valor de Width 
+        do elemento informado, conforme mostrado abaixo:</p>
+      <div class="bg-sky-100/50 flex flex-col space-y-2">
+        <app-code-viewer *ngIf="maxWidthElementCV" [codeViewer]="maxWidthElementCV"></app-code-viewer>
+        <p class="text-sm">A utilização desse parâmetro é recomendada para layouts responsivos.</p>
+      </div>
+    </div>
+    <div>
+      <p class="text-sm">O parâmetro <span class="font-semibold">"maxWidthPx"</span> recebe um valor que será aplicado como max-width do tabs, conforme mostrado abaixo:</p>
+      <div class="bg-sky-100/50 flex flex-col space-y-2">
+        <app-code-viewer *ngIf="maxWidthCV" [codeViewer]="maxWidthCV"></app-code-viewer>
+      </div>
+    </div>
+    <div>
+      <p class="text-sm">O parâmetro <span class="font-semibold">"fixedWidth"</span> recebe um valor que será aplicado como width (largura fixa) do tabs, conforme mostrado abaixo:</p>
+      <div class="bg-sky-100/50 flex flex-col space-y-2">
+        <app-code-viewer *ngIf="widthPxCV" [codeViewer]="widthPxCV"></app-code-viewer>
+      </div>
+    </div>
+</div>
+</div>

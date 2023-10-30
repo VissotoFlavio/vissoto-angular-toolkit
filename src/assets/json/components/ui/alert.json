@@ -1,0 +1,37 @@
+{
+  "data": {
+    "codeModule": {
+      "code": "import { AlertModule } from '@vissoto-angular/ui';\n\n\t@NgModule({\n\t\tdeclarations: [],\n\t\tproviders: [],\n\t\timports: [CommonModule, ComponentsRoutingModule, AlertModule],\n\t})\n\n\texport class ComponentsModule { }",
+      "language": "typescript"
+    },
+    "template": {
+      "code": "<vat-alert [show]=\"true\" [autoClose]=\"false\" [color]=\"'red'\" [labelButtonClose]=\"'close'\">Mensagem</vat-alert>",
+      "language": "html"
+    },
+    "timer": {
+      "code": "<vat-alert [timer]=\"10000\" [show]=\"true\" [autoClose]=\"false\" [color]=\"'red'\">Mensagem</vat-alert>",
+      "language": "html"
+    },
+    "show": {
+      "code": "<vat-alert [timer]=\"10000\" [show]=\"true\" [autoClose]=\"false\" [color]=\"'red'\">Mensagem</vat-alert>",
+      "language": "html"
+    },
+    "color": {
+      "code": "<vat-alert [timer]=\"10000\" [show]=\"true\" [autoClose]=\"false\" [color]=\"'red'\">Mensagem</vat-alert>",
+      "language": "html"
+    },
+    "autoClose": {
+      "code": "<vat-alert [autoClose]=\"false\">Mensagem</vat-alert>",
+      "language": "html"
+    },
+    "colorOptions": {
+      "code": "\n\t1 - red\n\t2 - gray\n\t3 - blue\n\t4 - green\n\t5 - yellow\n",
+      "language": "html"
+    },
+    "labelButtonClose": {
+      "code": "<vat-alert [labelButtonClose]=\"'close'\">Mensagem</vat-alert>",
+      "language": "html"
+    },
+    "attributes": ["byClickClose"]
+  }
+}

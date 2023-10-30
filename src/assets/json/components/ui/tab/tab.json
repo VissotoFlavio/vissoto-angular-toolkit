@@ -1,0 +1,31 @@
+{
+  "data": {
+    "codeModule": {
+      "code": "import { TabModule } from '@vissoto-angular/ui';\n\n\t@NgModule({\n\t\tdeclarations: [],\n\t\tproviders: [],\n\t\timports: [CommonModule, ComponentsRoutingModule, TabModule],\n\t})\n\n\texport class ComponentsModule { }",
+      "language": "typescript"
+    },
+    "interfaceTab":{
+      "code":"export interface TabItem {\n\t/**\n\t * Identificador do item.\n\t*/\n\tid: string;\n\n\t/**\n\t * Texto que será exibido no Tab.\n\t */\n\ttext?: string;\n\n\t/**\n\t * Imagem que será utilizada no Tab.\n\t */\n\timg?: Image;\n\n\t/**\n\t * Atribui o item como selecionado.\n\t */\n\tselected?: boolean;\n\n\t/**\n\t * Deixa o item desabilitado.\n\t */\n\tdisabled?: boolean;\n\n\t/**\n\t * Armazena informações que serão retornadas quando o usuário clicar o item.\n\t */\n\toptions: any;\n}",
+      "language": "typescript"
+    },
+    "maxWidthPx": {
+      "code": "<vat-tab [maxWidthPx]=\"480\"></vat-tab>",
+      "language": "html"
+    },
+    "maxWidthElement": {
+      "code": "<div #divExemplo>\n\t\t<vat-tab [maxWidthElement]=\"divExemplo\"></vat-tab>\n\t</div>",
+      "language": "html"
+    },
+    "widthPx": {
+      "code": "<vat-tab [fixedWidth]=\"250\"></vat-tab>",
+      "language": "html"
+    },
+    "events": [
+      {
+        "name": "byClicked",
+        "trigger": "Disparado quando o usuário clica em um item.",
+        "return": "Item clicado pelo usuário."
+      }
+    ]
+  }
+}

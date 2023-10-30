@@ -1,0 +1,55 @@
+
+
+<div class="flex flex-col">
+  <!-- TOPO -->
+  <div class="flex flex-col sm:flex-row items-center p-4">
+    <div class="bg-logo h-52 w-60"></div>
+    <div class="flex flex-col sm:w-2/3 justify-center space-y-4">
+      <p class="text-center">Seja bem vindo</p>
+      <p class="text-center">
+        O intuito desse site é auxiliar no desenvolvimento de sistemas utilizando
+        <a href="https://dotnet.microsoft.com/en-us/" class="font-semibold cursor-pointer hover:underline"
+          target="_blank">.Net</a>,
+        <a href="https://nodejs.org/en/" class="font-semibold cursor-pointer hover:underline">Node</a>
+        e
+        <a href="https://angular.io/" class="font-semibold cursor-pointer hover:underline">Angular</a>.
+      </p>
+    </div>
+  </div>
+
+  <!-- Social -->
+  <div>
+    <p class="w-full text-center">Você pode entrar em contato comigo nas redes sociais</p>
+    <div class="flex flex-row justify-center pt-4">
+      <div class="flex items-center ml-6 space-x-4 px-4">
+        <vat-tooltip [text]="'Facebook'" [position]="'top'">
+          <a href="https://www.facebook.com/flavio.vissoto/" target="_blank"
+            class="block text-blue-500 hover:text-blue-600 tooltip-trigger">
+            <img src="./../../../assets/img/facebook_64.png" width="50" /></a>
+        </vat-tooltip>
+        <vat-tooltip [text]="'Instagram'" [position]="'top'">
+          <a href="https://www.instagram.com/flaviovissoto/" target="_blank"
+            class="block text-blue-500 hover:text-blue-600 tooltip-trigger">
+            <img src="./../../../assets/img/instagram_64.png" width="50" /></a>
+        </vat-tooltip>
+        <vat-tooltip [text]="'GitHub'" [position]="'top'">
+          <a href="https://github.com/FlavioVissoto" target="_blank"
+            class="block text-blue-500 hover:text-blue-600 tool">
+            <img src="./../../../assets/img/github_64.png" width="50" /></a>
+        </vat-tooltip>
+        <vat-tooltip [text]="'YouTube'" [position]="'top'">
+          <a href="https://www.youtube.com/user/flaviovissoto" target="_blank"
+            class="block text-blue-500 hover:text-blue-600 tooltip-trigger">
+            <img src="./../../../assets/img/youtube_64.png" width="50" /></a>
+        </vat-tooltip>
+        <vat-tooltip [text]="'LinkedIn'" [position]="'top'">
+          <a href="https://www.linkedin.com/in/flavio-vissoto" target="_blank"
+            class="block text-blue-500 hover:text-blue-600 tooltip-trigger">
+            <img src="./../../../assets/img/linkedin_64.png" width="50" /></a>
+        </vat-tooltip>
+      </div>
+    </div>
+  </div>
+
+  <app-home-cards></app-home-cards>
+</div>

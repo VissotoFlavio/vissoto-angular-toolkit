@@ -1,0 +1,6 @@
+{
+  "data": {
+    "code": "export enum Size { \n\t\tExtraSmall = 1, \n\t\tSmall, \n\t\tBase,Large, \n\t\tExtraLarge, \n\t}",
+    "language": "typescript"
+  }
+}

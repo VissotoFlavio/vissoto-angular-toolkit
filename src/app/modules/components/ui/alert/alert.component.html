@@ -1,0 +1,102 @@
+<div class="md:mt-2">
+    <div class="flex items-center font-bold uppercase text-2xl">
+        <h1>UI Alert</h1>
+    </div>
+    <p class="pt-2 text-gray-600">Exemplos para utilização do componente Alert.</p>
+</div>
+<hr class="my-4 border-b-2 border-gray-200" />
+
+<div class="mb-6 text-sm">
+    <p class="">O componente de alerta pode ser usado para fornecer informações aos usuários, como mensagens de sucesso
+        ou de erro, mas também informações destacadas que complementam o fluxo normal de parágrafos e cabeçalhos em uma
+        página.</p>
+</div>
+
+<app-example-viewer [title]="'Alguns exemplos do componente Alert'">
+    <div class="grid grid-cols-1 xsm:grid-cols-2 lg:grid-cols-3 gap-2">
+        <vat-alert [show]="true" [autoClose]="false" [color]="item.value" *ngFor="let item of eColor | keyvalue">
+            <div class="flex gap-x-1 ml-2 items-center">
+                <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="10" />
+                    <line x1="12" x2="12" y1="8" y2="12" />
+                    <line x1="12" x2="12.01" y1="16" y2="16" />
+                </svg>
+                <p>Cor: {{item.value}}</p>
+            </div>
+        </vat-alert>
+    </div>
+</app-example-viewer>
+
+<div class="mt-10">
+    <h2 class="font-semibold">Configuração</h2>
+    <p class="text-sm">
+        Após instalar o componente, será necessário importar o Modulo do Alert nos modulos da aplicação, conforme
+        exemplo abaixo.
+    </p>
+    <app-code-viewer *ngIf="valuesPage.codeModule" [codeViewer]="valuesPage.codeModule"></app-code-viewer>
+</div>
+
+<div class="mt-10">
+    <h2 class="font-semibold">Eventos disponíveis no componente Alert</h2>
+    <div class="overflow-x-auto relative shadow-md mt-2">
+        <table class="w-full text-sm text-left text-gray-500">
+            <thead class="text-xs text-gray-700 uppercase bg-gray-100">
+                <tr>
+                    <th class="py-1 px-6">Nome do Evento</th>
+                    <th class="py-1 px-6">Quando ocorre</th>
+                    <th class="py-1 px-6">Retorno</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of valuesPage.events" class="hover:bg-gray-200/30">
+                    <th class="py-2 px-6 font-medium text-gray-900">{{ item.name }}</th>
+                    <td class="px-6">{{ item.trigger }}</td>
+                    <td class="px-6">{{ item.return }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="mt-10">
+    <h2 class="font-semibold">Exemplo para exibição do Alert</h2>
+    <div class="bg-sky-100/50 flex flex-col space-y-2">
+        <app-code-viewer *ngIf="valuesPage.template" [codeViewer]="valuesPage.template"></app-code-viewer>
+    </div>
+</div>
+
+<div class="mt-10">
+    <h2 class="font-semibold">Color</h2>
+    <div class="bg-sky-100/50 flex flex-col space-y-2">
+        <p class="text-sm">O parâmetro <span class="font-semibold">"Color"</span> recebe uma string, conforme mostrado
+            abaixo:</p>
+        <app-code-viewer *ngIf="valuesPage.colorStyle?.enum" [codeViewer]="valuesPage.colorStyle.enum"></app-code-viewer>
+    </div>
+</div>
+
+<div class="mt-10">
+    <h2 class="font-semibold">Show</h2>
+    <div class="bg-sky-100/50 flex flex-col space-y-2">
+        <p class="text-sm">O parâmetro <span class="font-semibold">"Show"</span> é utilizado para exibir o alerta:</p>
+        <app-code-viewer *ngIf="valuesPage.timer" [codeViewer]="valuesPage.show"></app-code-viewer>
+    </div>
+</div>
+
+<div class="mt-10">
+    <h2 class="font-semibold">AutoClose</h2>
+    <div class="bg-sky-100/50 flex flex-col space-y-2">
+        <p class="text-sm">O parâmetro <span class="font-semibold">"AutoClose"</span> é utilizado para controlar se o
+            alerta será fechado automaticamente pelo tempo especifidado pelo parametro "timer"</p>
+        <app-code-viewer *ngIf="valuesPage.autoClose" [codeViewer]="valuesPage.autoClose"></app-code-viewer>
+    </div>
+</div>
+
+<div class="mt-10">
+    <h2 class="font-semibold">Timer</h2>
+    <div class="bg-sky-100/50 flex flex-col space-y-2">
+        <p class="text-sm">O parâmetro <span class="font-semibold">"Timer"</span> é utilizado para especificar o tempo
+            que o alerta será exibido na tela antes de fechar</p>
+        <app-code-viewer *ngIf="valuesPage.timer" [codeViewer]="valuesPage.timer"></app-code-viewer>
+    </div>
+</div>

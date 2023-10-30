@@ -1,0 +1,191 @@
+{
+  "data": {
+    "FormEvents": [
+      {
+        "name": "byBlur",
+        "trigger": "Dispara no momento em que o elemento perde o foco.",
+        "return": "EventEmitter<FocusEvent>"
+      },
+      {
+        "name": "byChange",
+        "trigger": "Dispara no momento em que o valor do elemento é alterado",
+        "return": "EventEmitter<Event>"
+      },
+      {
+        "name": "byContextMenu",
+        "trigger": "Dispara quando um menu de contexto é acionado.",
+        "return": "EventEmitter<MouseEvent>"
+      },
+      {
+        "name": "byFocus",
+        "trigger": "Dispara no momento em que o elemento recebe o foco.",
+        "return": "EventEmitter<FocusEvent>"
+      },
+      {
+        "name": "byInput",
+        "trigger": "Dispara no momento em que o elemento recebe entrada do usuário.",
+        "return": "EventEmitter<InputEvent>"
+      },
+      {
+        "name": "bySelect",
+        "trigger": "Dispara após algum texto ter sido selecionado em um elemento.",
+        "return": "EventEmitter<Event>"
+      }
+    ],
+    "KeyboardEvents": [
+      {
+        "name": "byKeyDown",
+        "trigger": "Dispara quando o usuário está pressionando uma tecla.",
+        "return": "EventEmitter<KeyboardEvent>"
+      },
+      {
+        "name": "byKeyPress",
+        "trigger": "Dispara quando o usuário pressiona uma tecla.",
+        "return": "EventEmitter<KeyboardEvent>"
+      },
+      {
+        "name": "byKeyUp",
+        "trigger": "Dispara quando o usuário libera uma tecla.",
+        "return": "EventEmitter<KeyboardEvent>"
+      }
+    ],
+    "MouseEvents": [
+      {
+        "name": "byClick",
+        "trigger": "Dispara com um clique do mouse no elemento.",
+        "return": "EventEmitter<PointerEvent>"
+      },
+      {
+        "name": "byDblClick",
+        "trigger": "Dispara com um duplo clique do mouse no elemento",
+        "return": "EventEmitter<MouseEvent>"
+      },
+      {
+        "name": "byMouseDown",
+        "trigger": "Dispara quando um botão do mouse é pressionado no elemento.",
+        "return": "EventEmitter<MouseEvent>"
+      },
+      {
+        "name": "byMouseMove",
+        "trigger": "Dispara quando o ponteiro do mouse está se movendo enquanto está sobre o elemento.",
+        "return": "EventEmitter<MouseEvent>"
+      },
+      {
+        "name": "byMouseOut",
+        "trigger": "Dispara quando o ponteiro do mouse sai do elemento.",
+        "return": "EventEmitter<MouseEvent>"
+      },
+      {
+        "name": "byMouseOver",
+        "trigger": "Dispara quando o ponteiro do mouse se move sobre o elemento.",
+        "return": "EventEmitter<MouseEvent>"
+      },
+      {
+        "name": "byMouseUp",
+        "trigger": "Dispara quando um botão do mouse é liberado sobre o elemento.",
+        "return": "EventEmitter<MouseEvent>"
+      },
+      {
+        "name": "byWheel",
+        "trigger": "Dispara quando a roda do mouse rola para cima ou para baixo sobre o elemento.",
+        "return": "EventEmitter<WheelEvent>"
+      }
+    ],
+    "ClipboardEvents": [
+      {
+        "name": "byCopy",
+        "trigger": "Dispara quando o usuário copia o conteúdo do elemento.",
+        "return": "EventEmitter<ClipboardEvent>"
+      },
+      {
+        "name": "byCut",
+        "trigger": "Dispara quando o usuário corta o conteúdo do elemento.",
+        "return": "EventEmitter<ClipboardEvent>"
+      },
+      {
+        "name": "byPaste",
+        "trigger": "Dispara quando o usuário cola algum conteúdo no elemento.",
+        "return": "EventEmitter<ClipboardEvent>"
+      }
+    ],
+    "DragEvents": [
+      {
+        "name": "byDrag",
+        "trigger": "Disparado quando um elemento é arrastado.",
+        "return": "EventEmitter<DragEvent>"
+      },
+      {
+        "name": "byDragEnd",
+        "trigger": "Disparado no final de uma operação de arrastar.",
+        "return": "EventEmitter<DragEvent>"
+      },
+      {
+        "name": "byDragEnter",
+        "trigger": "Disparado quando um elemento for arrastado para um destino de soltar válido.",
+        "return": "EventEmitter<DragEvent>"
+      },
+      {
+        "name": "byDragLeave",
+        "trigger": "Disparado quando um elemento deixa um destino de soltar válido.",
+        "return": "EventEmitter<DragEvent>"
+      },
+      {
+        "name": "byDragOver",
+        "trigger": "Disparado quando um elemento está sendo arrastado sobre um destino de soltar válido.",
+        "return": "EventEmitter<DragEvent>"
+      },
+      {
+        "name": "byDragStart",
+        "trigger": "Disparado no início de uma operação de arrastar.",
+        "return": "EventEmitter<DragEvent>"
+      },
+      {
+        "name": "byDrop",
+        "trigger": "Disparado quando o elemento arrastado está sendo solto.",
+        "return": "EventEmitter<DragEvent>"
+      },
+      {
+        "name": "byScroll",
+        "trigger": "Disparado quando a barra de rolagem de um elemento está sendo rolada.",
+        "return": "EventEmitter<DragEvent>"
+      }
+    ],
+    "CustomEvents": [
+      {
+        "name": "byClickClose",
+        "trigger": "Dispara quando houver um clique do mouse no botão para fechar o elemento.",
+        "return": "EventEmitter"
+      },
+      {
+        "name": "byClickPlus",
+        "trigger": "Dispara quando houver um clique do mouse no botão \"plus\" elemento.",
+        "return": "EventEmitter<Day>"
+      },
+      {
+        "name": "byClickDate",
+        "trigger": "Dispara quando houver um clique do mouse no dia do mês",
+        "return": "EventEmitter<Day>"
+      },
+      {
+        "name": "byChangeMonth",
+        "trigger": "Dispara quando o mês for alterado.",
+        "return": "EventEmitter<Month>"
+      },
+      {
+        "name": "byClickMonth",
+        "trigger": "Dispara quando houver um clique do mouse no botão de seleção do mês.",
+        "return": "EventEmitter"
+      },
+      {
+        "name": "byChangeYear",
+        "trigger": "Dispara quando o ano for alterado.",
+        "return": "EventEmitter<number>"
+      },
+      {
+        "name": "byClickYear",
+        "trigger": "Dispara quando houver um clique do mouse no botão de seleção do ano.",
+        "return": "EventEmitter"
+      }
+    ]
+  }
+}

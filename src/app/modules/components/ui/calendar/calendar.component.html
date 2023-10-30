@@ -1,0 +1,125 @@
+<div class="md:mt-2">
+    <div class="flex items-center font-bold uppercase text-2xl">
+        <h1>UI Calendar</h1>
+    </div>
+    <p class="pt-2 text-gray-600">Exemplos para utilização do componente {{componentName}}.</p>
+</div>
+<hr class="my-4 border-b-2 border-gray-200" />
+
+<div class="mb-6 text-sm">
+    <p class="">O componente Calendário permite que o usuário exiba dados pelo calendário. Podendo interagir com o mesmo
+        e ter informações sobre os dias com algum evento.</p>
+</div>
+
+<app-example-viewer [title]="'Alguns exemplos do componente ' + componentName">
+    <div class="flex flex-wrap gap-x-16 gap-y-10 justify-center items-center">
+        <div>
+            <h3>Tema Clássico</h3>
+            <vat-calendar [notifications]="daysEvent" [addNotification]="events" (byClickPlus)="clickPlus($event)"
+                (byClickDate)="clickDate($event)">
+            </vat-calendar>
+        </div>
+        <div>
+            <h3>Tema Dark</h3>
+            <vat-calendar [theme]="'dark'" [notifications]="daysEvent" [addNotification]="events"
+                (byClickPlus)="clickPlus($event)" (byClickDate)="clickDate($event)">
+            </vat-calendar>
+        </div>
+    </div>
+
+    <div class="text-sm flex flex-col w-full space-y-1 mt-8">
+        <p *ngIf="selectedPlus">Botão Plus pressionado com a data
+            "{{selectedPlus.day}}/{{selectedPlus.month}}/{{selectedPlus.year}}" selecionado.</p>
+        <p *ngIf="selectedDay">Data selecionada "{{selectedDay.day}}/{{selectedDay.month}}/{{selectedDay.year}}"
+            selecionado.</p>
+    </div>
+</app-example-viewer>
+
+<div class="mt-10">
+    <h2 class="font-semibold">Configuração</h2>
+    <p class="text-sm">
+        Após instalar o componente, será necessário importar o Modulo do {{componentName}} nos modulos da aplicação,
+        conforme
+        exemplo abaixo.
+    </p>
+    <app-code-viewer *ngIf="valuesPage.codeModule" [codeViewer]="valuesPage.codeModule"></app-code-viewer>
+</div>
+
+<div class="mt-10">
+    <h2 class="font-semibold">Eventos disponíveis no componente {{componentName}}</h2>
+    <div class="overflow-x-auto relative shadow-md mt-2">
+        <table class="w-full text-sm text-left text-gray-500">
+            <thead class="text-xs text-gray-700 uppercase bg-gray-100">
+                <tr>
+                    <th class="py-1 px-6">Nome do Evento</th>
+                    <th class="py-1 px-6">Quando ocorre</th>
+                    <th class="py-1 px-6">Retorno</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of valuesPage.events" class="hover:bg-gray-200/30">
+                    <th class="py-2 px-6 font-medium text-gray-900">{{ item.name }}</th>
+                    <td class="px-6">{{ item.trigger }}</td>
+                    <td class="px-6">{{ item.return }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="mt-10">
+    <h2 class="font-semibold">Exemplo para exibição do {{componentName}}</h2>
+    <div class="bg-sky-100/50 flex flex-col space-y-2">
+        <app-code-viewer *ngIf="valuesPage.template" [codeViewer]="valuesPage.template"></app-code-viewer>
+    </div>
+</div>
+
+
+<div class="mt-10">
+    <h2 class="font-semibold">Exemplo para personalização do Tema</h2>
+    <div class="bg-sky-100/50 flex flex-col space-y-2">
+        <app-code-viewer *ngIf="valuesPage.template" [codeViewer]="valuesPage.template"></app-code-viewer>
+    </div>
+</div>
+
+<div class="mt-10">
+    <h2 class="font-semibold">Tema</h2>
+    <div class="bg-sky-100/50 flex flex-col space-y-2">
+        <div>
+            <p class="text-sm">O parâmetro <span class="font-semibold">"Theme"</span> permite selecionar os temas
+                "Classico" e "Dark".</p>
+            <p class="text-xs">Por padrão, o tema classico será selecionado.</p>
+        </div>
+        <app-code-viewer *ngIf="valuesPage.theme" [codeViewer]="valuesPage.theme"></app-code-viewer>
+    </div>
+</div>
+
+<div class="mt-10">
+    <h2 class="font-semibold">Adicionar Notificação</h2>
+    <div class="bg-sky-100/50 flex flex-col space-y-2">
+        <div>
+            <p class="text-sm">O parâmetro <span class="font-semibold">"notifications"</span> recebe uma coleção do tipo
+                <span class="font-semibold">"NotificationCalendar"</span> para que seja adicionado no calendário os dias
+                com notificação
+            </p>
+            <p class="text-sm">O parâmetro <span class="font-semibold">"addNotification"</span> recebe um <span
+                    class="font-semibold">EventEmitter&lt;NotificationCalendar[]&gt;</span> para que seja adicionado no
+                calendário os dias com notificação</p>
+        </div>
+        <app-code-viewer *ngIf="valuesPage.notification" [codeViewer]="valuesPage.notification"></app-code-viewer>
+        <app-code-viewer *ngIf="valuesPage.addNotification" [codeViewer]="valuesPage.addNotification"></app-code-viewer>
+    </div>
+</div>
+
+<div class="mt-10">
+    <h2 class="font-semibold">Personalização dos Meses</h2>
+    <div class="bg-sky-100/50 flex flex-col space-y-2">
+        <div>
+            <p class="text-sm">O parâmetro <span class="font-semibold">"months"</span> recebe uma coleção do tipo
+                <span class="font-semibold">"Month"</span> Que sera utilizado para criação dos meses.
+            </p>
+            <p class="text-xs">Por padrão, os meses estão em Português Brasil.</p>
+        </div>
+        <app-code-viewer *ngIf="valuesPage.months" [codeViewer]="valuesPage.months"></app-code-viewer>
+    </div>
+</div>

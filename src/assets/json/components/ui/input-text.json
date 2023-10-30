@@ -1,0 +1,13 @@
+{
+  "data": {
+    "codeModule": {
+      "code": "import { InputTextModule } from '@vissoto-angular/ui';\n\n\t@NgModule({\n\t\tdeclarations: [],\n\t\tproviders: [],\n\t\timports: [CommonModule, ComponentsRoutingModule, InputTextModule],\n\t})\n\n\texport class ComponentsModule { }",
+      "language": "typescript"
+    },
+    "codeControlForm": {
+      "code": "<vat-input-text [control]=\"formControl\"></vat-input-text>",
+      "language": "html"
+    },
+    "attributes": ["placeholder", "readonly", "required", "max", "maxlength", "min", "minlength", "name"]
+  }
+}

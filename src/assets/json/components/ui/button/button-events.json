@@ -1,0 +1,17 @@
+[
+  {
+    "name": "byClick",
+    "trigger": "Disparado quando o usuário clica no botão.",
+    "return": "-"
+  },
+  {
+    "name": "byHover",
+    "trigger": "Disparado quando o cursor do mouse passa sobre o botão.",
+    "return": "-"
+  },
+  {
+    "name": "byLeave",
+    "trigger": "Disparado quando o cursor do mouse sai do botão.",
+    "return": "-"
+  }
+]

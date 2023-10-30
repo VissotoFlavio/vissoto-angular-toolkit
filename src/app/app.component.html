@@ -1,0 +1,9 @@
+<div class="background-sky hero"></div>
+<app-navbar (byClickOpenMenu)="openMenu()"></app-navbar>
+<div class="container flex mt-16">
+  <app-sidebar [toggleMenuEmitter]="toggleOpenMenu"></app-sidebar>
+  <div class="px-6 w-full md:w-[75%] md:ml-[25%] 2xl:ml-[16.6%]">
+    <router-outlet></router-outlet>
+    <app-footer></app-footer>
+  </div>
+</div>

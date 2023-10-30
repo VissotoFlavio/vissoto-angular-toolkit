@@ -1,0 +1,44 @@
+{
+  "data": [
+    {
+      "name": "placeholder",
+      "description": "Especifica uma dica curta que descreve o valor esperado do elemento",
+      "typeEntry": "string"
+    },
+    {
+      "name": "required",
+      "description": "Especifica que o elemento deve ser preenchido antes de enviar o formulário",
+      "typeEntry": "boolean"
+    },
+    {
+      "name": "readonly",
+      "description": "Especifica que o elemento é somente leitura",
+      "typeEntry": "boolean"
+    },
+    {
+      "name": "max",
+      "description": "Especifica o valor máximo",
+      "typeEntry": "number"
+    },
+    {
+      "name": "maxlength",
+      "description": "Especifica o número máximo de caracteres permitidos em um elemento",
+      "typeEntry": "number"
+    },
+    {
+      "name": "min",
+      "description": "Especifica o valor mínimo",
+      "typeEntry": "number"
+    },
+    {
+      "name": "minlength",
+      "description": "Especifica o número mínimo de caracteres permitidos em um elemento",
+      "typeEntry": "number"
+    },
+    {
+      "name": "name",
+      "description": "Especifica o nome do elemento",
+      "typeEntry": "string"
+    }
+  ]
+}

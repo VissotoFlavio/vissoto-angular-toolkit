@@ -1,0 +1,25 @@
+{
+  "data": {
+    "codeModule": {
+      "code": "import { ModalModule } from '@vissoto-angular/ui';\n\n\t@NgModule({\n\t\tdeclarations: [],\n\t\tproviders: [],\n\t\timports: [CommonModule, ComponentsRoutingModule, ModalModule],\n\t})\n\n\texport class ComponentsModule { }",
+      "language": "typescript"
+    },
+    "template": {
+      "code": "<vat-modal [title]=\"'DragonBall GT'\" [show]=\"showModal\" [rounded]=\"3\" (byClickClose)=\"closeModal()\">\n\t\t<div body>\n\t\t\t<img src=\"https://i.pinimg.com/564x/dc/19/b7/dc19b79974f05a53755bc95fdb3c0889.jpg\" class=\"w-64\" alt=\"\">\n\t\t</div>\n\t\t<div footer>\n\t\t\t<vat-button [text]=\"'Fechar'\" [rounded]=\"2\" [collor]=\"1\" (byClick)=\"closeModal()\"></vat-button>\n\t\t\t<vat-button [text]=\"'Fechar'\" [rounded]=\"2\" [collor]=\"6\" (byClick)=\"closeModal()\"></vat-button>\n\t\t</div>\n\t</vat-modal>",
+      "language": "html"
+    },
+    "rounded": {
+      "code": "\n\t<vat-modal [rounded]=\"1\"></vat-modal>\n\t<vat-modal [rounded]=\"2\"></vat-modal>\n\t<vat-modal [rounded]=\"3\"></vat-modal>\n\t<vat-modal [rounded]=\"4\"></vat-modal>\n\t<vat-modal [rounded]=\"5\"></vat-modal>",
+      "language": "html"
+    },
+    "show": {
+      "code": "<vat-modal [show]=\"true\"></vat-modal>",
+      "language": "html"
+    },
+    "cssClassHeader": {
+      "code": "<vat-modal [cssClassHeader]=\"'cssSuperSaiyajin'\"></vat-modal>",
+      "language": "html"
+    },
+    "attributes": ["placeholder"]
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "data": {
+    "codeModule": {
+      "code": "import { CheckboxModule } from '@vissoto-angular/ui';\n\n\t@NgModule({\n\t\tdeclarations: [],\n\t\tproviders: [],\n\t\timports: [CommonModule, ComponentsRoutingModule, CheckboxModule],\n\t})\n\n\texport class ComponentsModule { }",
+      "language": "typescript"
+    },
+    "events": [
+      {
+        "name": "byChange",
+        "trigger": "Disparado quando o usuário seleciona uma opção.",
+        "return": "Item selecionado pelo usuário."
+      }
+    ],
+    "codeSimples": {
+      "code": "<vat-checkbox [text]=\"'checkbox teste'\"></vat-checkbox>",
+      "language": "html"
+    },
+    "codeChecked": {
+      "code": "<vat-checkbox [text]=\"'checkbox checked'\" [checked]=\"true\"></vat-checkbox>\n\t<vat-checkbox [text]=\"'checkbox disabled'\" [checked]=\"false\"></vat-checkbox>",
+      "language": "html"
+    },
+    "codeDisabled": {
+      "code": "<vat-checkbox [text]=\"'checkbox disabled'\" [disabled]=\"true\"></vat-checkbox>\n\t<vat-checkbox [text]=\"'checkbox disabled'\" [disabled]=\"false\"></vat-checkbox>",
+      "language": "html"
+    },
+    "codeHelperText": {
+      "code": "<vat-checkbox [text]=\"'Checkbox com ajuda'\" [helperText]=\"'Mensagem de ajuda para o checkbox'\"></vat-checkbox>",
+      "language": "html"
+    },
+    "codeControlForm": {
+      "code": "<vat-checkbox [text]=\"'Checkbox formControl'\" [control]=\"formCheck.controls.chk\" [helperText]=\"'Mensagem de ajuda para o checkbox'\"></vat-checkbox>",
+      "language": "html"
+    }
+  }
+}

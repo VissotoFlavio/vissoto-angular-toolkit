@@ -1,0 +1,20 @@
+@import './../../../assets/css/scss/media-query.scss';
+
+.tictactoe {
+  iframe {
+    margin-top: 1rem;
+    border-radius: 5px;
+    width: 100%;
+
+    height: 35vh;
+
+  @include xsm {
+    height: 51vh;
+  }
+
+  @include sm {
+    height: 62vh;
+  }
+
+  }
+}

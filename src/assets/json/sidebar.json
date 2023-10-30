@@ -1,0 +1,12 @@
+[
+  {
+    "href": "module/http-client",
+    "iconCss": "icon-github",
+    "text": "HTTP CLIENT"
+  },
+  {
+    "href": "module/ui",
+    "iconCss": "icon-fire",
+    "text": "UI"
+  }
+]

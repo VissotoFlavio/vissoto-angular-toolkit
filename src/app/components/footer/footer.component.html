@@ -1,0 +1,30 @@
+<footer class="mt-6 p-4 md:flex md:items-center md:justify-between md:p-6 bg-blue-400/10">
+  <div class="flex flex-col space-y-4 justify-center py-4 ">
+    <a class="w-44 text-xs leading-5 text-blue-600 py-1 px-4 font-semibold"
+      [routerLink]="['/']">
+      Vissoto - Angular Toolkit
+    </a>
+    <div class="flex items-center ml-4 space-x-4">
+      <vat-tooltip [text]="'Facebook'" [position]="ePosition.top">
+        <a href="https://www.facebook.com/flavio.vissoto/" target="_blank"
+          class="icon-facebook2 block text-blue-500 hover:text-blue-600 tooltip-trigger"></a>
+      </vat-tooltip>
+      <vat-tooltip [text]="'Instagram'" [position]="ePosition.top">
+        <a href="https://www.instagram.com/flaviovissoto/" target="_blank"
+          class="icon-instagram block text-blue-500 hover:text-blue-600 tooltip-trigger"></a>
+      </vat-tooltip>
+      <vat-tooltip [text]="'GitHub'" [position]="ePosition.top">
+        <a href="https://github.com/FlavioVissoto" target="_blank"
+          class="icon-github block text-blue-500 hover:text-blue-600 tool"></a>
+      </vat-tooltip>
+      <vat-tooltip [text]="'YouTube'" [position]="ePosition.top">
+        <a href="https://www.youtube.com/user/flaviovissoto" target="_blank"
+          class="icon-youtube2 block text-blue-500 hover:text-blue-600 tooltip-trigger"></a>
+      </vat-tooltip>
+      <vat-tooltip [text]="'LinkedIn'" [position]="ePosition.top">
+        <a href="https://www.linkedin.com/in/flavio-vissoto" target="_blank"
+          class="icon-linkedin block text-blue-500 hover:text-blue-600 tooltip-trigger"></a>
+      </vat-tooltip>
+    </div>
+  </div>
+</footer>

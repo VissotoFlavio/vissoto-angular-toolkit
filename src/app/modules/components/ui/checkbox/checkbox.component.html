@@ -1,0 +1,118 @@
+<div class="md:mt-2">
+    <div class="flex items-center font-bold uppercase text-2xl">
+        <h1>UI Checkbox</h1>
+    </div>
+    <p class="pt-2 text-gray-600">Exemplos para utilização do componente Checkbox.</p>
+</div>
+<hr class="my-4 border-b-2 border-gray-200" />
+
+<div class="mb-6 text-sm">
+    <p class="">Use o componente select para permitir o usuário selecionar uma opção.</p>
+</div>
+
+<app-example-viewer [title]="'Alguns exemplos do componente Checkbox'">
+    <div class="flex flex-col xsm:flex-row xsm:space-x-2 space-y-4 xsm:space-y-0 justify-center items-center">
+        <vat-checkbox [text]="'Checkbox simples'"></vat-checkbox>
+        <vat-checkbox [text]="'Checkbox checked'" [checked]="true"></vat-checkbox>
+        <vat-checkbox [text]="'Checkbox disabled'" [checked]="true" [disabled]="true"></vat-checkbox>
+        <vat-checkbox [text]="'Checkbox com Helper'" [control]="formCheck.controls.chk"
+            [helperText]="'Mensagem de ajuda para o checkbox'"></vat-checkbox>
+    </div>
+</app-example-viewer>
+
+<div class="mt-10">
+    <h2 class="font-semibold">Configuração</h2>
+    <p class="text-sm">
+        Após instalar o componente, será necessário importar o Modulo do Select nos modulos da aplicação, conforme
+        exemplo abaixo.
+    </p>
+    <app-code-viewer *ngIf="valuesPage.codeModule" [codeViewer]="valuesPage.codeModule"></app-code-viewer>
+</div>
+
+<div class="mt-10">
+    <h2 class="font-semibold">Eventos disponíveis no componente Select</h2>
+    <div class="overflow-x-auto relative shadow-md mt-2">
+        <table class="w-full text-sm text-left text-gray-500">
+            <thead class="text-xs text-gray-700 uppercase bg-gray-100">
+                <tr>
+                    <th class="py-1 px-6">Nome do Evento</th>
+                    <th class="py-1 px-6">Quando ocorre</th>
+                    <th class="py-1 px-6">Retorno</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of valuesPage.events" class="hover:bg-gray-200/30">
+                    <th class="py-2 px-6 font-medium text-gray-900 whitespace-nowrap">{{ item.name }}</th>
+                    <td class="px-6">{{ item.trigger }}</td>
+                    <td class="px-6">{{ item.return }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="mt-10">
+    <h2 class="font-semibold">Exemplo para utilização da propriedade text</h2>
+    <div class="bg-sky-100/50 flex flex-col space-y-2">
+        <div class="flex flex-col xsm:flex-row xsm:space-x-2 space-y-4 xsm:space-y-0 justify-center items-center p-4">
+            <vat-checkbox [text]="'Checkbox simples'"></vat-checkbox>
+            <vat-checkbox [text]="'Checkbox simples outro texto'"></vat-checkbox>
+        </div>
+        <p class="text-sm">O parâmetro <span class="font-semibold">"text"</span> recebe um string.</p>
+        <app-code-viewer *ngIf="valuesPage.codeSimples" [codeViewer]="valuesPage.codeSimples"></app-code-viewer>
+    </div>
+</div>
+
+<div class="mt-10">
+    <h2 class="font-semibold">Exemplo para utilização da propriedade checked</h2>
+    <div class="bg-sky-100/50 flex flex-col space-y-2">
+        <div class="flex flex-col xsm:flex-row xsm:space-x-2 space-y-4 xsm:space-y-0 justify-center items-center p-4">
+            <vat-checkbox [text]="'Checkbox selecioando'" [checked]="true"></vat-checkbox>
+            <vat-checkbox [text]="'Checkbox não selecionado'" [checked]="false"></vat-checkbox>
+        </div>
+        <div>
+            <p class="text-sm">O parâmetro <span class="font-semibold">"checked"</span> recebe um boolean, para selecionar o elemento.</p>
+            <p class="text-[12px]">Por padrão o valor será false.</p>
+        </div>
+        <app-code-viewer *ngIf="valuesPage.codeChecked" [codeViewer]="valuesPage.codeChecked"></app-code-viewer>
+    </div>
+</div>
+
+<div class="mt-10">
+    <h2 class="font-semibold">Exemplo para utilização da propriedade disabled</h2>
+    <div class="bg-sky-100/50 flex flex-col space-y-2">
+        <div class="flex flex-col xsm:flex-row xsm:space-x-2 space-y-4 xsm:space-y-0 justify-center items-center p-4">
+            <vat-checkbox [text]="'Checkbox selecioando'" [checked]="true"></vat-checkbox>
+            <vat-checkbox [text]="'Checkbox não selecionado'" [checked]="false"></vat-checkbox>
+        </div>
+        <div>
+            <p class="text-sm">O parâmetro <span class="font-semibold">"disabled"</span> recebe um boolean, que desativa o elemento.</p>
+            <p class="text-[12px]">Por padrão o valor será false.</p>
+        </div>
+        <app-code-viewer *ngIf="valuesPage.codeDisabled" [codeViewer]="valuesPage.codeDisabled"></app-code-viewer>
+    </div>
+</div>
+
+<div class="mt-10">
+    <h2 class="font-semibold">Exemplo para utilização da propriedade HelperText</h2>
+    <div class="bg-sky-100/50 flex flex-col space-y-2">
+        <div class="flex justify-center p-4">
+            <vat-checkbox [text]="'Checkbox com Helper'" [helperText]="'Mensagem de ajuda para o checkbox'"></vat-checkbox>
+        </div>
+        <p class="text-sm">O parâmetro <span class="font-semibold">"helperText"</span> recebe um string, que será exibido logo abaixo do
+            texto.</p>
+        <app-code-viewer *ngIf="valuesPage.codeHelperText" [codeViewer]="valuesPage.codeHelperText"></app-code-viewer>
+    </div>
+</div>
+
+<div class="mt-10">
+    <h2 class="font-semibold">Exemplo para utilização da propriedade FormControl</h2>
+    <p class="text-sm">Caso esteja utilizando o modulo "ReactiveFormsModule", é possível passar um FormControl para o componente Checkbox.</p>
+    <div class="bg-sky-100/50 flex flex-col space-y-2">
+        <div class="flex justify-center p-4">
+            <vat-checkbox [text]="'Checkbox com FormControl'" [control]="formCheck.controls.chk" [helperText]="'Está utilizando o FormControl'"></vat-checkbox>
+        </div>
+        <p class="text-sm">O parâmetro <span class="font-semibold">"control"</span> recebe um objeto "FormControl.</p>
+        <app-code-viewer *ngIf="valuesPage.codeControlForm" [codeViewer]="valuesPage.codeControlForm"></app-code-viewer>
+    </div>
+</div>

@@ -1,0 +1,65 @@
+<div class="md:mt-2">
+  <div class="flex items-center font-bold uppercase text-2xl">
+    <h1>UI Tooltip</h1>
+  </div>
+  <p class="pt-2 text-gray-600">Exemplos para utilização do componente Tooltip.</p>
+</div>
+<hr class="my-4 border-b-2 border-gray-200" />
+
+<div class="mb-6 text-sm">
+  <p class="">
+    Tooltip ou dica de contexto é um elemento comum de interface gráfica. Tooltip é aquela moldura flutuante que abre
+    quando passa-se o
+    mouse sobre um elemento da interface e que contém uma explicação adicional sobre tal elemento. É utilizado em
+    conjunto com um cursor,
+    normalmente um ponteiro do mouse.
+  </p>
+</div>
+
+<app-example-viewer [title]="'Exemplo do componente Tooltip'">
+  <div class="grid grid-cols-1 place-items-center gap-y-4 sm:grid-cols-2 xl:grid-cols-4">
+
+    <div *ngFor="let item of ePosition | keyvalue" class="bg-blue-100">
+      <vat-tooltip [text]="item.value" [position]="item.value"
+        [show]="item.value == 'bottom'">
+        <button class="w-56 xl:w-40 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-2 rounded capitalize">{{item.value}}</button>
+      </vat-tooltip>
+    </div>
+  </div>
+</app-example-viewer>
+
+<div class="mt-4">
+  <h2 class="font-semibold">Configuração</h2>
+  <p class="text-sm">
+    Após instalar o componente, será necessário importar o Modulo do Tooltip nos modulos da aplicação, conforme exemplo
+    abaixo.
+  </p>
+  <app-code-viewer [codeViewer]="codeModule"></app-code-viewer>
+</div>
+
+<div class="mt-4">
+  <h2 class="font-semibold">Exemplo de utilização</h2>
+  <p class="text-sm">Exemplo de como utilizar o componente Tooltip</p>
+  <app-code-viewer [codeViewer]="codeExample"></app-code-viewer>
+</div>
+
+<div class="mt-4">
+  <h2 class="font-semibold">Texto</h2>
+  <p class="text-sm">O texto que será exibido no tooltip deve ser definido no atributo "text"</p>
+  <app-code-viewer [codeViewer]="codeText"></app-code-viewer>
+</div>
+
+<div class="mt-4">
+  <h2 class="font-semibold">Posição de abertura</h2>
+  <p class="text-sm">
+    Por padrão, o tooltip será aberto para cima. Essa posição pode ser alterada definindo o atributo "<span
+      class="font-semibold">position</span>".
+  </p>
+  <app-code-viewer [codeViewer]="codePosition"></app-code-viewer>
+</div>
+
+<div class="mt-4">
+  <h2 class="font-semibold">Enum Position</h2>
+  <p class="text-sm">Opções do enumerador "Position".</p>
+  <app-code-viewer [codeViewer]="codeEnum"></app-code-viewer>
+</div>

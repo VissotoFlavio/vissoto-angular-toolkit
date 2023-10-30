@@ -1,0 +1,42 @@
+{
+  "data": {
+    "radius": [
+      {
+        "name": "none",
+        "cssClass": "border-radius: 0;"
+      },
+      {
+        "name": "sm",
+        "cssClass": "border-radius: 0.125rem; /* 2px */"
+      },
+      {
+        "name": "rounded",
+        "cssClass": "border-radius: 0.25rem; /* 4px */"
+      },
+      {
+        "name": "md",
+        "cssClass": "border-radius: 0.375rem; /* 6px */"
+      },
+      {
+        "name": "lg",
+        "cssClass": "border-radius: 0.5rem; /* 8px */"
+      },
+      {
+        "name": "xl",
+        "cssClass": "border-radius: 0.75rem; /* 12px */"
+      },
+      {
+        "name": "2xl",
+        "cssClass": "border-radius: 1rem; /* 16px */"
+      },
+      {
+        "name": "3xl",
+        "cssClass": "border-radius: 1.5rem; /* 24px */"
+      },
+      {
+        "name": "full",
+        "cssClass": "border-radius: 9999px;"
+      }
+    ]
+  }
+}

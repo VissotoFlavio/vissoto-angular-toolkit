@@ -1,0 +1,27 @@
+{
+  "data": {
+    "codeModule": {
+      "code": "import { SelectModule } from '@vissoto-angular/ui';\n\n\t@NgModule({\n\t\tdeclarations: [],\n\t\tproviders: [],\n\t\timports: [CommonModule, ComponentsRoutingModule, CheckboxModule],\n\t})\n\n\texport class ComponentsModule { }",
+      "language": "typescript"
+    },
+    "events": [
+      {
+        "name": "bySelected",
+        "trigger": "Disparado quando o usuário seleciona uma opção.",
+        "return": "Item selecionado pelo usuário."
+      }
+    ],
+    "codeTitle": {
+      "code": "<vat-select [title]=\"'Selecione o Pokemon'\" [itens]=\"itens\"></vat-select>",
+      "language": "html"
+    },
+    "codePlaceholder": {
+      "code": "<vat-select [placeholder]=\"'Selecione um item'\" [itens]=\"itens\"></vat-select>",
+      "language": "html"
+    },
+    "codeRounded": {
+      "code": "\n\t<vat-select [rounded]=\"1\" [itens]=\"itens\"></vat-select>\n\t<vat-select [rounded]=\"2\" [itens]=\"itens\"></vat-select>\n\t<vat-select [rounded]=\"3\" [itens]=\"itens\"></vat-select>\n\t<vat-select [rounded]=\"4\" [itens]=\"itens\"></vat-select>",
+      "language": "html"
+    }
+  }
+}

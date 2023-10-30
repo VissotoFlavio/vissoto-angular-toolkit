@@ -1,0 +1,59 @@
+<aside
+   class="fixed inset-0 z-40 h-full md:block md:w-1/4 lg:w-1/5 2xl:w-1/6 pt-[2.75rem] md:pt-14 bg-white md:bg-transparent"
+   [ngClass]="{'hidden': !showMenu}">
+   <div class="overflow-y-auto z-20 h-[calc(100vh)] lg:sticky lg:mr-0">
+      <nav class="lg:px-3 lg:pl-0 lg:pt-2 font-normal text-base lg:text-sm pb-20">
+         <ul class="space-y-2">
+            <li *ngFor="let item of sidebarPrincipal">
+               <a [routerLink]="item.href" class="flex flex-row items-baseline p-2 text-sm font-normal text-gray-900"
+                  (click)="clickMenu()">
+                  <i class="pl-1 text-gray-500 {{ item.iconCss }}"></i>
+                  <span class="flex-1 ml-3">{{item.text}}</span>
+                  <span *ngIf="item.textAuxiliary"
+                     class="inline-flex justify-center items-center px-2 ml-3 text-sm font-medium text-gray-800 bg-gray-200 rounded-full"
+                     [ngClass]="{'text-blue-600 bg-blue-200': item.textAuxiliaryCollor == 'blue',
+                                 'text-red-600 bg-red-200': item.textAuxiliaryCollor == 'red'}">{{item.textAuxiliary}}</span>
+               </a>
+            </li>
+         </ul>
+         <div class="pt-4 mt-4 space-y-2 border-t border-gray-200">
+            <ul class="space-y-2">
+               <li *ngFor="let item of sidebarSecondary">
+                  <div class="flex">
+                     <span class="pl-4">{{item.title}}</span>
+                     <span *ngIf="item.textAuxiliary"
+                        class="inline-flex justify-center items-center px-2 ml-3 text-sm font-medium text-gray-800 bg-gray-200 rounded-full"
+                        [ngClass]="{'text-blue-600 bg-blue-200': item.textAuxiliaryCollor == 'blue',
+                                 'text-red-600 bg-red-200': item.textAuxiliaryCollor == 'red'}">{{item.textAuxiliary}}</span>
+                  </div>
+                  <ul class="pl-4">
+                     <li *ngFor="let subitem of item.items">
+                        <a *ngIf="subitem.target != '_blank'" [routerLink]="subitem.href"
+                           class="flex items-center p-2 md:p-1 text-xs font-normal text-gray-900 rounded-lg transition duration-75 hover:bg-gray-100 group"
+                           (click)="clickMenu()">
+                           <i class="pl-1 text-gray-500 {{ subitem.iconCss }}"></i>
+                           <span class="flex-1 ml-3">{{subitem.text}}</span>
+                           <span *ngIf="subitem.textAuxiliary"
+                              class="inline-flex justify-center items-center px-2 ml-3 text-sm font-medium text-gray-800 bg-gray-200 rounded-full"
+                              [ngClass]="{'text-blue-600 bg-blue-200': subitem.textAuxiliaryCollor == 'blue',
+                                    'text-red-600 bg-red-200': subitem.textAuxiliaryCollor == 'red'}">{{subitem.textAuxiliary}}</span>
+                        </a>
+                        <a *ngIf="subitem.target == '_blank'" [href]="subitem.href" [target]="subitem.target"
+                           class="flex items-center p-2 md:p-1 text-xs font-normal text-gray-900 rounded-lg transition duration-75 hover:bg-gray-100  group"
+                           (click)="clickMenu()">
+                           <i class="pl-1 text-gray-500 {{ subitem.iconCss }}"></i>
+                           <span class="flex-1 ml-3">{{subitem.text}}</span>
+                           <span *ngIf="subitem.textAuxiliary"
+                              class="inline-flex justify-center items-center px-2 ml-3 text-sm font-medium text-gray-800 bg-gray-200 rounded-full"
+                              [ngClass]="{'text-blue-600 bg-blue-200': subitem.textAuxiliaryCollor == 'blue',
+                                    'text-red-600 bg-red-200': subitem.textAuxiliaryCollor == 'red'}">{{subitem.textAuxiliary}}</span>
+                        </a>
+                     </li>
+                  </ul>
+               </li>
+            </ul>
+         </div>
+         <app-sidebar-info></app-sidebar-info>
+      </nav>
+   </div>
+</aside>

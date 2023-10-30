@@ -1,0 +1,70 @@
+{
+  "data": {
+    "colors": [
+      {
+        "name": "blue",
+        "cssClass": ""
+      },
+      {
+        "name": "alternative",
+        "cssClass": ""
+      },
+      {
+        "name": "green",
+        "cssClass": ""
+      },
+      {
+        "name": "red",
+        "cssClass": ""
+      },
+      {
+        "name": "yellow",
+        "cssClass": ""
+      },
+      {
+        "name": "purple",
+        "cssClass": ""
+      },
+      {
+        "name": "orange",
+        "cssClass": ""
+      },
+      {
+        "name": "pink",
+        "cssClass": ""
+      },
+      {
+        "name": "purpleToBlue",
+        "cssClass": ""
+      },
+      {
+        "name": "cyanToBlue",
+        "cssClass": ""
+      },
+      {
+        "name": "greenToBlue",
+        "cssClass": ""
+      },
+      {
+        "name": "purpleToPink",
+        "cssClass": ""
+      },
+      {
+        "name": "pinkToOrange",
+        "cssClass": ""
+      },
+      {
+        "name": "tealToLime",
+        "cssClass": ""
+      },
+      {
+        "name": "redToYellow",
+        "cssClass": ""
+      }
+    ],
+    "enum": {
+      "code": "export enum Color {\n\t\tblue = 'blue',\n\t\talternative = 'alternative',\n\t\tgreen = 'green',\n\t\tred = 'red',\n\t\tyellow = 'yellow',\n\t\tpurple = 'purple',\n\t\torange = 'orange',\n\t\tpink = 'pink',\n\t\tpurpleToBlue = 'purple-to-blue',\n\t\tcyanToBlue = 'cyan-to-blue',\n\t\tgreenToBlue = 'green-to-blue',\n\t\tpurpleToPink = 'purple-to-pink',\n\t\tpinkToOrange = 'pink-to-orange',\n\t\ttealToLime = 'teal-to-lime',\n\t\tredToYellow = 'red-to-yellow',\n\t}",
+      "language": "typescript"
+    }
+  }
+}
